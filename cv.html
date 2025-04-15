@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi CV - Conix</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="left-section">
+      <img src="images/logo.png" alt="Logo" class="logo">
+      <span class="brand">Conix</span>
+    </div>
+    <h1 class="header-title">Mi Portafolio</h1>
+    <div class="right-section">
+      <button class="menu-button" onclick="toggleMenu()">☰</button>
+      <nav class="dropdown" id="dropdownMenu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="proyecto">
+    <div class="proyecto-texto">
+      <h2>Mi Currículum</h2>
+      <p>A continuación puedes ver mi CV completo con mi formación, experiencia y habilidades.</p>
+    </div>
+
+    <div class="proyecto-imagenes">
+      <!-- Espacio para una imagen grande de tu CV -->
+      <img src="images/cv.png" alt="Mi CV" class="img-cv">
+    </div>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>

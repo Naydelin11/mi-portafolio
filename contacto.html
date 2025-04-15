@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto - Portafolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="left-section">
+      <img src="images/logo.png" alt="Logo" class="logo">
+      <span class="brand">pcy-conix</span>
+    </div>
+    <h1 class="header-title">Mi Portafolio</h1>
+    <div class="right-section">
+      <button class="menu-button" onclick="toggleMenu()">☰</button>
+      <nav class="dropdown" id="dropdownMenu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact-section">
+    <!-- Imagen de contacto -->
+    <div class="contact-imagen">
+      <img src="images/chau.png" alt="Imagen de contacto" />
+    </div>
+  
+    <!-- Contenedor de los iconos de contacto -->
+    <div class="iconos-contacto">
+      <h2>Contacto</h2>
+      <p>Puedes encontrarme en las siguientes plataformas:</p>
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="mailto:correo@ejemplo.com"><i class="fas fa-envelope"></i> Gmail</a>
+      <a href="tel:+123456789"><i class="fas fa-phone"></i> Teléfono</a>
+      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </section>
+  
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>

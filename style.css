@@ -1,0 +1,368 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* ENCABEZADO */
+  .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  /* IZQUIERDA: Logo + nombre */
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 30%;
+    margin-right: 10px;
+    border: 2px solid #7c1d1d00;
+  }
+  
+  .brand {
+    font-weight: bold;
+    color: #d1d5db;
+  }
+  
+  /* CENTRO: título */
+  .header-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #580303;
+  }
+  
+  /* DERECHA: Menú */
+  .right-section {
+    position: relative;
+  }
+  
+  .menu-button {
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: #000000;
+    border-radius: 5px;
+    min-width: 160px;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown ul li {
+    border-bottom: 1px solid #444;
+  }
+  
+  .dropdown ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown ul li a {
+    display: block;
+    color: #f3f4f6;
+    padding: 12px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown ul li a:hover {
+    background-color: #4a4a4a;
+    color: #520000;
+  }
+  
+  /* Mostrar menú cuando se hace clic */
+  .show {
+    display: block;
+  }
+  
+  /* Responsive: que se acomode bonito */
+  @media (max-width: 768px) {
+    .main-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .header-title {
+      text-align: center;
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .dropdown {
+      top: 60px;
+      right: 10px;
+    }
+  }
+  
+  .bienvenida {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    background-color: #f3f4f6;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .foto-perfil {
+    width: 320px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px; /* Menos redondeado */
+    border: 4px solid #7c1d1d;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  }
+  
+  .texto {
+    max-width: 600px;
+    text-align: center;
+    color: #1f1f1f;
+  }
+  
+  .texto h2 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    color: #580303;
+  }
+  
+  .texto p {
+    font-size: 1.2rem;
+    margin: 12px 0;
+    line-height: 1.8;
+  }
+  
+  .proyecto {
+    padding: 50px 20px;
+    background-color: #fefefe;
+    color: #1a1a1a;
+  }
+  
+  .proyecto-texto {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: left;
+  }
+  
+  .proyecto-texto h2 {
+    font-size: 1.8rem;
+    color: #580303;
+    margin-bottom: 15px;
+  }
+  
+  .proyecto-texto p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    line-height: 1.6;
+  }
+  
+  .proyecto-imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .img-captura {
+    width: 280px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .img-captura-grande {
+    width: 500px;
+  }
+
+  .img-cv {
+    width: 90%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  }
+
+/* CONTACTO */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #fff;
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    color: #580303;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de iconos de contacto */
+.iconos-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* Estilo para los enlaces de los iconos */
+.iconos-contacto a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.iconos-contacto a i {
+    font-size: 1.8rem;
+    color: #580303;
+}
+
+.iconos-contacto a:hover {
+    color: #9e1e1e;
+    transform: scale(1.05);
+}
+
+/* Estilo de la imagen */
+.contact-imagen {
+    max-width: 300px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px;
+}
+.proyecto-conix {
+    padding: 60px 20px;
+    background-color: #f3f4f6;
+  }
+  
+  .proyecto-bloque {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .proyecto-bloque h2 {
+    color: #580303;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .proyecto-objetivo {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #333;
+  }
+  
+  .proyecto-imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .proyecto-boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #580303;
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .proyecto-boton:hover {
+    background-color: #7c1d1d;
+  }
+  
+  /* Botón centrado */
+.proyecto-boton-contenedor {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Imagen más grande para proy1-5 */
+  .img-grande {
+    max-width: 400%;
+    height: auto;
+    border: 2px solid #580303;
+    border-radius: 10px;
+  }
+
+  /* Ocultar el menú de inicio */
+.dropdown {
+    display: none;
+  }
+  
+  /* Mostrar el menú cuando tiene la clase 'active' */
+  .dropdown.active {
+    display: block;
+  }
+  
+  /* Estilos para el botón del menú */
+  .menu-button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #580303;
+  }
+/* Ocultar el menú desplegable por defecto */
+.dropdown {
+    display: none;
+  }
+  
+  /* Mostrar el menú cuando tiene la clase 'show' */
+  .dropdown.show {
+    display: block;
+  }
+  
+  /* Estilos para el botón del menú */
+  .menu-button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #580303;
+  }
+    
+  

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <!-- Logo y nombre -->
+    <div class="left-section">
+        <img src="images/logo.png" alt="Logo" class="logo" />
+
+      <span class="brand">pcy-conix</span>
+    </div>
+
+    <!-- Título centrado -->
+    <h1 class="header-title">Mi Portafolio</h1>
+
+    <!-- Menú desplegable -->
+    <div class="right-section">
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav class="dropdown" id="dropdownMenu">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="cv.html">Currículum</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+  </header>
+    <!-- Sección de bienvenida -->
+    <section class="bienvenida">
+        <div class="foto">
+          <img src="images/foto.jpg" alt="Foto de Naydelin" class="foto-perfil" />
+        </div>
+        <div class="texto">
+          <h2>BIENVENIDX</h2>
+          <p><strong>Mi nombre es Naydelin Carolina Palmero Medrano</strong></p>
+          <p>Te presento mi portafolio donde encontrarás mis proyectos como <strong>UX Designer</strong></p>
+        </div>
+      </section>
+    
+      <script>
+        function toggleMenu() {
+          document.getElementById('dropdownMenu').classList.toggle('show');
+        }
+      
+        // Cierra el menú si se hace clic fuera de él
+        window.onclick = function(event) {
+          var dropdown = document.getElementById("dropdownMenu");
+          if (!event.target.matches('.menu-button') && !event.target.matches('.dropdown') && !event.target.matches('.dropdown *')) {
+            if (dropdown.classList.contains('show')) {
+              dropdown.classList.remove('show');
+            }
+          }
+        }
+      </script>
+      
+
+<section class="proyecto">
+    <div class="proyecto-texto">
+      <h2>📱 Objetivo del proyecto </h2>
+      <p><strong>Mi rol:</strong> Diseñadora UX</p>
+      <p><strong>Objetivo:</strong> Diseñar una aplicación móvil intuitiva que permita a los usuarios explorar y comprar ropa y accesorios de moda de forma rápida, visual y accesible desde cualquier lugar.</p>
+      <p><strong>Público objetivo:</strong> Jóvenes y adultos interesados en moda actual, que buscan una experiencia de compra ágil desde su celular, con acceso a productos modernos y promociones exclusivas.</p>
+      <p><strong>Limitaciones:</strong> Los principales desafíos fueron optimizar la navegación en pantallas pequeñas y generar confianza en el proceso de pago móvil, asegurando una experiencia fluida y segura.</p>
+    </div>
+  
+    <!-- Imágenes móviles -->
+    <div class="proyecto-imagenes">
+        <img src="images/mobile1.png" alt="Captura móvil 1" class="img-captura">
+        <img src="images/mobile2.png" alt="Captura móvil 2" class="img-captura img-captura-grande">
+      </div>
+     
+ 
+    <div class="proyecto-texto">
+      <h2>💻 Objetivo del proyecto</h2>
+      <p><strong>Objetivo:</strong> Crear una tienda en línea atractiva y funcional donde los usuarios puedan comprar ropa y accesorios de Conix fácilmente desde su computadora, con filtros por categoría, estilo, talla y promociones destacadas.</p>
+    </div>
+  
+    <!-- Imágenes escritorio -->
+    <div class="proyecto-imagenes">
+        <img src="images/desktop1.png" alt="Captura escritorio 1" class="img-captura">
+        <img src="images/desktop2.png" alt="Captura escritorio 2" class="img-captura img-captura-grande">
+      </div>
+      
+  </section>
+  
+</body>
+</html>
